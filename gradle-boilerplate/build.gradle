@@ -1,0 +1,26 @@
+plugins {
+    id 'application'
+}
+
+group = 'com.sd101'
+version = '1.0.0'
+
+sourceCompatibility = '11'
+
+application {
+    // Fully qualified name of your main class
+    mainClass = 'com.sd101.boilerplate.Main'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Add any dependencies here, e.g., logging, json, etc.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+test {
+    useJUnitPlatform()
+}
