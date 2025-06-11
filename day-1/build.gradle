@@ -1,0 +1,32 @@
+plugins {
+    id 'application'
+    id 'war'
+}
+
+group = 'com.sd101'
+version = '1.0.0'
+
+sourceCompatibility = '11'
+
+application {
+    // Fully qualified name of your main class
+    mainClass = 'com.sd101.day1.Main'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+    // Add any dependencies here, e.g., logging, json, etc.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+war {
+    archiveFileName = 'day-1-servlet-app.war'
+}
+
+test {
+    useJUnitPlatform()
+}
